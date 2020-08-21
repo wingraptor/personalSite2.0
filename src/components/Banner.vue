@@ -15,7 +15,7 @@
     <vue-particles
       color="#FFD700"
       hoverMode="repulse"
-      shapeType="star"
+      shapeType="circle"
       :lineLinked="false"
       :particlesNumber="80"
       :particleSize="6"

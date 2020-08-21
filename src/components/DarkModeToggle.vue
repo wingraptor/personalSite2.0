@@ -1,6 +1,6 @@
 <template>
-  <div class="darkmode-toggle">
-    <v-icon class="darkmode-toggle__icon" name="lightbulb" scale="1.8" @click="toggleColorMode"></v-icon>
+  <div class="darkmode-toggle" @click="toggleColorMode">
+    <v-icon class="darkmode-toggle__icon" name="lightbulb" scale="1.8"></v-icon>
   </div>
 </template>
 
@@ -58,5 +58,8 @@ export default {
 .darkmode-toggle {
   color: var(--main-text-color);
   cursor: pointer;
+  background-color: var(--highlight-one);
+  padding: 5px;
+  border-radius: 10%;
 }
 </style>
