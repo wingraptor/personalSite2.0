@@ -17,9 +17,5 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  /* background-image: url('../assets/background-image-2.jpg'); */
-    /* background: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.5)),
-    url('../assets/5-dots.png'); */
-}
+
 </style>

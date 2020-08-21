@@ -1,9 +1,10 @@
 <template>
-  <div id="navbar">
-    <b-nav align="center">
-      <b-nav-item>Active</b-nav-item>
-      <b-nav-item>Link</b-nav-item>
-    </b-nav>
+  <div class="navbar-bottom py-3">
+    <div class="navbar-bottom__div d-flex justify-content-around align-items-center">
+      <a target="_blank" href="/portfolio" class="link">Portfolio</a>
+      <a target="_blank" href="/about" class="link">About</a>
+      <a target="_blank" href="/blog" class="link">Blog</a>
+    </div>
   </div>
 </template>
 
@@ -16,4 +17,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.navbar-bottom__div .link{
+  font-weight: bold;
+}
 </style>
