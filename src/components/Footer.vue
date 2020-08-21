@@ -1,9 +1,9 @@
 <template>
   <div class="navbar-bottom py-3">
     <div class="navbar-bottom__div d-flex justify-content-around align-items-center">
-      <a target="_blank" href="/portfolio" class="link">Portfolio</a>
-      <a target="_blank" href="/about" class="link">About</a>
-      <a target="_blank" href="/blog" class="link">Blog</a>
+      <a href="/portfolio" class="link">Portfolio</a>
+      <a href="/about" class="link">About</a>
+      <a href="/blog" class="link">Blog</a>
     </div>
   </div>
 </template>
@@ -20,5 +20,9 @@ export default {
 
 .navbar-bottom__div .link{
   font-weight: bold;
+}
+
+.navbar-bottom{
+  background-color: var(--main-background-color);
 }
 </style>

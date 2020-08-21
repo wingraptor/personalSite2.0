@@ -25,12 +25,19 @@ export default {
 
 <style>
 
+:root{
+  --main-text-color:#000;
+  --main-background-color: #fff;
+  --highlight-one: #FFD700; 
+  --highlight-two: #77dd77;
+  --transition-one: all 0.3s ease;
+}
 /* Change text highlight color */
 ::selection {
-  background: #FFD700; /* WebKit/Blink Browsers */
+  background: var(--highlight-one); /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #FFD700; /* Gecko Browsers */
+  background: var(--highlight-one); /* Gecko Browsers */
 }
 
 html,
@@ -40,11 +47,11 @@ body {
 }
 
 a {
-  color: #FFD700 !important;
+  color: var(--highlight-one) !important;
 }
 
 a:hover, a:active, a:focus {
-  color: #77dd77 !important;
+  color: var(--highlight-two) !important;
   text-decoration: none !important;
 }
 
@@ -53,7 +60,6 @@ a:hover, a:active, a:focus {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   min-height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;

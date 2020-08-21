@@ -1,5 +1,4 @@
 <template>
-  <!-- w-100 d-flex justify-content-center align-items-center -->
   <div
     class="banner w-100 h-100 d-flex justify-content-center align-items-center position-relative"
   >
@@ -35,7 +34,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .banner {
-  background-color: #ffffff;
+  background-color: var(--main-background-color);
+  transition: var(--transition-one);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -44,19 +44,19 @@ export default {
 }
 
 .banner__div h1 {
-  text-shadow: 3px 3px #000;
-  color: #000;
+  /* text-shadow: 3px 3px var(--main-text-color); */
+  color: var(--main-text-color);
   font-size: 7rem;
 }
 
 .banner__div .subtitle {
   font-size: 1.7rem;
-  color: #000;
+  color: var(--main-text-color);
   font-weight: bold;
 }
 
 .particles-js {
-  /* background-color: #ffffff; */
+  /* background-color: var(--main-background-color); */
   /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
   position: absolute;
   top: 0;
