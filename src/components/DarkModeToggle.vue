@@ -1,5 +1,5 @@
 <template>
-  <div class="darkmode-toggle" @click="toggleColorMode">
+  <div class="darkmode-toggle" @click="toggleDarkMode()">
     <v-icon class="darkmode-toggle__icon" name="lightbulb" scale="1.8"></v-icon>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
     };
   },
   methods: {
-    toggleColorMode() {
+    toggleDarkMode() {
       if (this.colorMode === "lightMode") {
         // Set Color of text
         document.documentElement.style.setProperty(
@@ -48,7 +48,7 @@ export default {
         // Update colorMode
         this.colorMode = "lightMode";
       }
-    },
+    }
   },
 };
 </script>

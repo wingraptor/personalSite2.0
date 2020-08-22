@@ -12,22 +12,53 @@
         <v-icon name="brands/github" scale="2.5"></v-icon>
       </a>
     </div>
-    <vue-particles
-      color="#FFD700"
-      hoverMode="repulse"
-      shapeType="circle"
-      :lineLinked="false"
-      :particlesNumber="80"
-      :particleSize="6"
-      class="particles-js"
-    ></vue-particles>
+    <div id="particles-js"></div>
   </div>
 </template>
 
 <script>
+import "particles.js";
+import particleSettings from "@/assets/particles.js";
+import { hexToRgb } from "@/assets/helperFunctions.js";
+
 export default {
   name: "LandingPage",
-  props: {},
+  data() {
+    return {
+    };
+  },
+  props: ["highlightColor"],
+  methods: {
+    forceRerender() {
+      this.testKey += 1;
+    },
+    // Change colors of all particles
+    changeParticleColor(color) {
+      // See -> https://github.com/VincentGarreau/particles.js/issues/71
+      window.pJSDom[0].pJS.particles.array.forEach((particle) => {
+        particle.color.value = color;
+        particle.color.rgb = hexToRgb(color);
+      });
+    },
+  },
+  mounted() {
+    // load particles js on component mounting -> https://stackoverflow.com/a/50343970
+    window.particlesJS(
+      "particles-js",
+      // configuration goes here
+      particleSettings
+    );
+  },
+  watch: {
+    highlightColor(newColor) {
+      this.changeParticleColor(newColor);
+    },
+  },
+  // Allows for the destruction of particleJS instance when you move from page - See https://github.com/creotip/vue-particles/issues/20#issuecomment-406809340
+  beforeDestroy() {
+    window.pJSDom[0].pJS.fn.vendors.destroypJS();
+    window["pJSDom"] = [];
+  },
 };
 </script>
 
@@ -55,7 +86,7 @@ export default {
   font-weight: bold;
 }
 
-.particles-js {
+#particles-js {
   /* background-color: var(--main-background-color); */
   /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
   position: absolute;

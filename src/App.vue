@@ -30,7 +30,7 @@ export default {
   --main-background-color: #fff;
   --highlight-one: #FFD700; 
   --highlight-two: #77dd77;
-  --transition-one: all 0.3s ease;
+  --transition-one: all 0.7s ease;
 }
 /* Change text highlight color */
 ::selection {
