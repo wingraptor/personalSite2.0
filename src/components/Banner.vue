@@ -19,7 +19,7 @@
 <script>
 import "particles.js";
 import particleSettings from "@/assets/particles.js";
-import { hexToRgb } from "@/assets/helperFunctions.js";
+import { HsltoRgb } from "@/assets/helperFunctions.js";
 
 export default {
   name: "LandingPage",
@@ -37,7 +37,7 @@ export default {
       // See -> https://github.com/VincentGarreau/particles.js/issues/71
       window.pJSDom[0].pJS.particles.array.forEach((particle) => {
         particle.color.value = color;
-        particle.color.rgb = hexToRgb(color);
+        particle.color.rgb = HsltoRgb(color);
       });
     },
   },

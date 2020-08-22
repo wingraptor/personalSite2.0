@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { randomColorHex } from "@/assets/helperFunctions.js";
+import { randomColorHsl } from "@/assets/helperFunctions.js";
 
 export default {
   name: "HighlightColorToggle",
@@ -18,7 +18,7 @@ export default {
   methods: {
     toggleHighlightColor() {
       // Choose random highlightColor
-      const highlightColor = randomColorHex();
+      const highlightColor = randomColorHsl();
       // Update highlight color CSS variable
       document.documentElement.style.setProperty(
         "--highlight-one",
