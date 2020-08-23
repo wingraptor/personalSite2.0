@@ -12,6 +12,9 @@ export default {
   props: {},
   data() {
     return {
+      allowHighlightButtonColorChange: true,
+      count: 0,
+      highlightColorToggle: document.querySelector(".colormode-toggle"),
     };
   },
   methods: {
@@ -23,9 +26,32 @@ export default {
         "--highlight-one",
         highlightColor
       );
+      // 'Reset' highlightbutton background color to use css variable 
+      this.resetHighlightButtonColor();
+      // Stop highlight button from flashing
+      this.allowHighlightButtonColorChange = false;
       // Send highlight color to parent element
       this.$emit("highlightColor", highlightColor);
     },
+    changeHighlightButtonColor() {
+      // console.log(this.highlightColorToggle)
+      if (this.count < 10 && this.allowHighlightButtonColorChange) {
+        document.querySelector(
+          ".colormode-toggle"
+        ).style.backgroundColor = randomColorHsl();
+        this.count++;
+        window.setTimeout(() => this.changeHighlightButtonColor(), 400);
+      } else {
+        this.resetHighlightButtonColor()
+      }
+    },
+    resetHighlightButtonColor() {
+      document.querySelector(".colormode-toggle").style.backgroundColor =
+        "var(--highlight-one)";
+    },
+  },
+  mounted() {
+    this.changeHighlightButtonColor();
   },
 };
 </script>
