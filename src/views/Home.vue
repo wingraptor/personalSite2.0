@@ -27,7 +27,6 @@ export default {
   methods:{
     updateHighlightColor(color){
       this.highlightColor = color;
-      console.log(this.highlightColor);
     }
   }
 };

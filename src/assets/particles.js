@@ -8,7 +8,7 @@ export default {
       },
     },
     color: {
-      value: "#FFD700",
+      value: "#8080ff",
     },
     shape: {
       type: "circle",

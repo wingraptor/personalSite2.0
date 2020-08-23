@@ -1,6 +1,6 @@
 <template>
   <div class="colormode-toggle" @click="toggleHighlightColor()">
-    <v-icon class="colormode-toggle__icon" name="palette" scale="1.8"></v-icon>
+    <v-icon class="colormode-toggle__icon" name="paint-brush" scale="1.8"></v-icon>
   </div>
 </template>
 
@@ -12,7 +12,6 @@ export default {
   props: {},
   data() {
     return {
-      highlightColors: ["#FFD700", "#77dd77"],
     };
   },
   methods: {

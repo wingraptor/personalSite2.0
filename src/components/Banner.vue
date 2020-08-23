@@ -19,7 +19,7 @@
 <script>
 import "particles.js";
 import particleSettings from "@/assets/particles.js";
-import { HsltoRgb } from "@/assets/helperFunctions.js";
+import { hslToRgb, hslToHex } from "@/assets/helperFunctions.js";
 
 export default {
   name: "LandingPage",
@@ -34,10 +34,13 @@ export default {
     },
     // Change colors of all particles
     changeParticleColor(color) {
+      const rgbColor = hslToRgb(color);
+      const hexColor = hslToHex(color);
+      console.log()
       // See -> https://github.com/VincentGarreau/particles.js/issues/71
       window.pJSDom[0].pJS.particles.array.forEach((particle) => {
-        particle.color.value = color;
-        particle.color.rgb = HsltoRgb(color);
+        particle.color.value = hexColor;
+        particle.color.rgb = rgbColor;
       });
     },
   },
@@ -82,7 +85,7 @@ export default {
 
 .banner__div .subtitle {
   font-size: 1.7rem;
-  color: var(--main-text-color);
+  color: var(--highlight-one);
   font-weight: bold;
 }
 

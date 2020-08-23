@@ -28,7 +28,7 @@ export default {
 :root{
   --main-text-color:#000;
   --main-background-color: #fff;
-  --highlight-one: #FFD700; 
+  --highlight-one: #8080ff; 
   --highlight-two: #77dd77;
   --transition-one: all 0.7s ease;
 }
