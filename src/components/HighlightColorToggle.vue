@@ -34,7 +34,6 @@ export default {
       this.$emit("highlightColor", highlightColor);
     },
     changeHighlightButtonColor() {
-      // console.log(this.highlightColorToggle)
       if (this.count < 10 && this.allowHighlightButtonColorChange) {
         document.querySelector(
           ".colormode-toggle"
@@ -45,12 +44,14 @@ export default {
         this.resetHighlightButtonColor()
       }
     },
+    // Set highlightbutton background color to css variable
     resetHighlightButtonColor() {
       document.querySelector(".colormode-toggle").style.backgroundColor =
         "var(--highlight-one)";
     },
   },
   mounted() {
+    // Start changing highlight button color
     this.changeHighlightButtonColor();
   },
 };

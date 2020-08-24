@@ -44,6 +44,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  /* font-family: 'Lato', sans-serif; */
 }
 
 a {
@@ -55,8 +56,15 @@ a:hover, a:active, a:focus {
   text-decoration: none !important;
 }
 
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Sedgwick Ave', cursive;
+  /* font-family: 'Rubik', sans-serif; */
+
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Shadows Into Light', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
