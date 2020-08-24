@@ -15,23 +15,15 @@ export default {
       allowHighlightButtonColorChange: true,
       count: 0,
       highlightColorToggle: document.querySelector(".colormode-toggle"),
+      highlightColor: "",
     };
   },
   methods: {
     toggleHighlightColor() {
       // Choose random highlightColor
-      const highlightColor = randomColorHsl();
-      // Update highlight color CSS variable
-      document.documentElement.style.setProperty(
-        "--highlight-one",
-        highlightColor
-      );
-      // 'Reset' highlightbutton background color to use css variable 
-      this.resetHighlightButtonColor();
+      this.highlightColor = randomColorHsl();
       // Stop highlight button from flashing
       this.allowHighlightButtonColorChange = false;
-      // Send highlight color to parent element
-      this.$emit("highlightColor", highlightColor);
     },
     changeHighlightButtonColor() {
       if (this.count < 10 && this.allowHighlightButtonColorChange) {
@@ -41,7 +33,7 @@ export default {
         this.count++;
         window.setTimeout(() => this.changeHighlightButtonColor(), 400);
       } else {
-        this.resetHighlightButtonColor()
+        this.resetHighlightButtonColor();
       }
     },
     // Set highlightbutton background color to css variable
@@ -49,10 +41,34 @@ export default {
       document.querySelector(".colormode-toggle").style.backgroundColor =
         "var(--highlight-one)";
     },
+    // Get user's saved highlight Color from local storage if available
+    getUserHighlightColor() {
+      if (localStorage.highlightColor) {
+        this.highlightColor = localStorage.highlightColor;
+        // this.$emit("highlightColor", localStorage.highlightColor);
+      }
+    },
+    // Set the user's highlight color
+    setUserHighlightColor(highlightColor) {
+      localStorage.highlightColor = highlightColor;
+    },
   },
   mounted() {
     // Start changing highlight button color
     this.changeHighlightButtonColor();
+    this.getUserHighlightColor();
+  },
+  watch: {
+    highlightColor(color) {
+      // Update highlight color CSS variable
+      document.documentElement.style.setProperty("--highlight-one", color);
+      // 'Reset' highlightbutton background color to use css variable
+      this.resetHighlightButtonColor();
+      // Set User's highlight color to local storage
+      this.setUserHighlightColor(color);
+      // Send highlight color to parent element
+      this.$emit("highlightColor", color);
+    },
   },
 };
 </script>
