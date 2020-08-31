@@ -22,7 +22,7 @@ export default {
   components: {
     Banner,
     DarkModeToggle,
-    HighlightColorToggle
+    HighlightColorToggle,
   },
   methods:{
     updateHighlightColor(color){
@@ -33,17 +33,5 @@ export default {
 </script>
 
 <style scoped>
-.darkmode-toggle {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  z-index: 999;
-}
 
-.colormode-toggle {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  z-index: 999;
-}
 </style>
