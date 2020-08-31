@@ -43,6 +43,11 @@ export default {
   background: var(--highlight-one); /* Gecko Browsers */
 }
 
+
+.highlighted{
+  color: var(--highlight-one);
+}
+
 html,
 body {
   width: 100%;
@@ -51,7 +56,7 @@ body {
 }
 
 a {
-  color: var(--highlight-one) !important;
+  /* color: var(--highlight-one) !important; */
 }
 
 a:hover,
@@ -69,6 +74,7 @@ h5,
 h6 {
   font-family: "Sedgwick Ave", cursive;
   /* font-family: 'Rubik', sans-serif; */
+  color: var(--highlight-one);
 }
 
 .link{

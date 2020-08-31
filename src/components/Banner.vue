@@ -5,10 +5,10 @@
     <div class="banner__div text-dark">
       <h1 class="title">Akono Brathwaite</h1>
       <p class="subtitle">Web Developer</p>
-      <a class="mx-2" href="https://www.linkedin.com/in/akono-brathwaite-a0446297">
+      <a class="mx-2 highlighted" href="https://www.linkedin.com/in/akono-brathwaite-a0446297">
         <v-icon name="brands/linkedin" scale="2.5"></v-icon>
       </a>
-      <a class="mx-2" href="https://github.com/wingraptor">
+      <a class="mx-2 highlighted" href="https://github.com/wingraptor">
         <v-icon name="brands/github" scale="2.5"></v-icon>
       </a>
     </div>

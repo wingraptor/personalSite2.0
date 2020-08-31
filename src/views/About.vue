@@ -35,6 +35,7 @@
                 Completed
                 <a
                   href="https://courses.edx.org/certificates/517d69c5d088475d9f90ef9b21043c88"
+                  class="highlighted"
                   target="_blank"
                 >Harvard’s CS50</a>: CS50’s Introduction to Computer Science course on edX.
               </li>
@@ -43,12 +44,13 @@
                 <a
                   href="http://ude.my/UC-9LNDKRUX"
                   target="_blank"
+                  class="highlighted"
                 >Udemy</a>.
               </li>
               <li class="list-group-item">
                 Vist my
-                <a href="/portfolio/">portfolio page</a> or
-                <a href="https://github.com/wingraptor" target="_blank">Github</a> to see what I’ve what I’m working on and have done so far!
+                <a href="/portfolio/" class="highlighted">portfolio page</a> or
+                <a href="https://github.com/wingraptor"  class="highlighted" target="_blank">Github</a> to see what I’ve what I’m working on and have done so far!
               </li>
             </ul>
           </div>
