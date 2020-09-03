@@ -43,4 +43,9 @@ export default {
   margin-top: 8rem;
   margin-bottom: 5rem;
 }
+
+.row{
+  background-color: var(--highlight-one);
+  border-radius: 10px;
+}
 </style>
