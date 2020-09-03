@@ -90,7 +90,7 @@ export default {
 } */
 
 .about__div {
-  width: 100%;
+  /* width: 100%; */
   margin-top: 8rem;
   margin-bottom: 5rem;
 }

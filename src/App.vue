@@ -55,9 +55,9 @@ body {
   /* font-family: 'Lato', sans-serif; */
 }
 
-a {
-  /* color: var(--highlight-one) !important; */
-}
+/* a {
+  color: var(--highlight-one) !important;
+} */
 
 a:hover,
 a:active,
