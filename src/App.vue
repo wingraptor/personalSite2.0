@@ -43,8 +43,7 @@ export default {
   background: var(--highlight-one); /* Gecko Browsers */
 }
 
-
-.highlighted{
+.highlighted {
   color: var(--highlight-one);
 }
 
@@ -55,31 +54,34 @@ body {
   /* font-family: 'Lato', sans-serif; */
 }
 
-/* a {
+a {
   color: var(--highlight-one) !important;
-} */
+}
 
 a:hover,
 a:active,
 a:focus {
-  color: var(--highlight-two) !important;
+  /* background-color: rbga(var(--highlight-one), 0.5) !important; */
   text-decoration: none !important;
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: "Sedgwick Ave", cursive;
   /* font-family: 'Rubik', sans-serif; */
   color: var(--highlight-one);
 }
 
-.link{
-  font-family: 'Shadows Into Light', cursive;
+h3,
+h4,
+h5,
+h6 {
+  color: var(--highlight-one);
 }
+
+/* .link {
+  font-family: "Shadows Into Light", cursive;
+} */
 
 .darkmode-toggle {
   position: absolute;

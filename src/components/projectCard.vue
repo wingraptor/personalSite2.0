@@ -1,7 +1,7 @@
 <template>
-  <b-card class="component-card shadow">
+  <b-card no-body class="component-card shadow">
     <!-- Card Image -->
-    <a :href="project.title">
+    <a :href="project.url">
       <b-card-img :src="project.imgUrl" top></b-card-img>
     </a>
     <!-- Card Body -->

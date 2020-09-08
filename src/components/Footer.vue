@@ -6,7 +6,7 @@
       </b-link>
       <b-link :active="$route.name === 'Portfolio'" href="/portfolio" class="footer__link">Portfolio</b-link>
       <b-link :active="$route.name === 'About'" href="/about" class="footer__link">About</b-link>
-      <b-link href="/blog" class="footer__link">Blog</b-link>
+      <b-link href="https://blog.akonobrathwaite.com/" class="footer__link">Blog</b-link>
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
 <style scoped>
 .footer__link {
   font-size: 1.5em;
-  font-family: "Shadows Into Light", cursive;
+  /* font-family: "Shadows Into Light", cursive; */
   color: var(--highlight-one);
 }
 

@@ -50,7 +50,11 @@
               <li class="list-group-item">
                 Vist my
                 <a href="/portfolio/" class="highlighted">portfolio page</a> or
-                <a href="https://github.com/wingraptor"  class="highlighted" target="_blank">Github</a> to see what I’ve what I’m working on and have done so far!
+                <a
+                  href="https://github.com/wingraptor"
+                  class="highlighted"
+                  target="_blank"
+                >Github</a> to see what I’ve what I’m working on and have done so far!
               </li>
             </ul>
           </div>
@@ -61,7 +65,6 @@
 </template>
 
 <script>
-
 import DarkModeToggle from "@/components/DarkModeToggle.vue";
 import HighlightColorToggle from "@/components/HighlightColorToggle.vue";
 export default {
@@ -69,7 +72,7 @@ export default {
   props: {},
   components: {
     DarkModeToggle,
-    HighlightColorToggle
+    HighlightColorToggle,
   },
   data() {
     return {};
@@ -89,13 +92,17 @@ export default {
   z-index: 999;
 } */
 
+#about {
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 .about__div {
   /* width: 100%; */
   margin-top: 8rem;
   margin-bottom: 5rem;
 }
 
-.list-group-item{
+.list-group-item {
   background-color: var(--main-background-color);
   border: 1px solid #dee2e6;
 }
