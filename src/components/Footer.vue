@@ -26,7 +26,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footer__link {
-  font-size: 1.5em;
+  font-size: 1.25em;
   /* font-family: "Shadows Into Light", cursive; */
   color: var(--highlight-one);
 }
