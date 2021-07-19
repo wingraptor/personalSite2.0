@@ -1,5 +1,12 @@
 const projects = [
   {
+    title: "Conuco Worm Farm",
+    description: `<p>This is an ecommerce website which was made using the static site generator Hugo (using a modified theme)</p>`,
+    url: "https://conucowormfarm.com/",
+    imgUrl: "https://i.imgur.com/rYIVqdu.png",
+    github: "https://github.com/wingraptor/conucoWormFarmStore",
+  },
+  {
     title: "De Plantuh Man Directory",
     description: `<p>This web app acts a directory for Barbadian agricultural businesses.</p> <p>This web app was built using <a href="https://vuejs.org/">Vue.js</a> and  <a href="https://bootstrap-vue.org/"> Bootstrap Vue</a></p>`,
     url: "https://directory.deplantuhman.com/",
@@ -7,17 +14,19 @@ const projects = [
     github: "https://github.com/wingraptor/deplantuhmandirectory",
   },
   {
-    title: "Mobaton-a News",
-    description: `<p>This is a news aggregator website (built using Express.js and EJS) which displays news articles from popular Barbadian news and other informational websites.</p> 
-    <p>Associated with this project is a website scraper (built using NodeJs + MongoDB as the database) and a WhatsApp News Bot (Nodejs and Twilio) </p>`,
-    url: "https://tranquil-mountain-25146.herokuapp.com/",
-    imgUrl: "https://i.imgur.com/MPfcvewh.jpg",
-    github: "https://github.com/wingraptor/mobatonnews",
+    title: "Bajan News Aggregator",
+    description: `<p>This is a news aggregator website (built using Vue.js) which displays news articles from popular Barbadian news and other informational websites.</p> 
+    <p>Associated with this project is a <a href="https://github.com/wingraptor/news-site-scraper">website scraper</a> (built using NodeJs + MongoDB as the database).</p>`,
+    url: "https://bajan-news-aggregator.vercel.app/",
+    imgUrl: "https://i.imgur.com/0FMiMBL.png",
+    github: "https://github.com/wingraptor/bajannewsaggregator",
   },
   {
     title: "Spotify Playlist Creator",
     description: `This is website adds a Spotify playlist to your account which contains tracks from the best 50 albums of 2018 according to <a href='https://www.complex.com/music/best-albums-2018/'>Complex Magazine</a>.
-    This website project was built using Express.js and EJS`,
+    This website project was built using Express.js and EJS
+    </br>
+    <strong class="highlighted"> Note that this project is no longer maintained</strong>`,
     url: "https://spotifyplaylistapp.herokuapp.com/",
     imgUrl: "https://i.imgur.com/1RLzrJSh.jpg",
     github: "https://github.com/wingraptor/spotifyPlaylist",
