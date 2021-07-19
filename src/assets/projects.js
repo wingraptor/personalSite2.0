@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Conuco Worm Farm",
-    description: `<p>This is an ecommerce website which was made using the static site generator Hugo (using a modified theme)</p>`,
+    description: `<p>This is an ecommerce website which was made using the static site generator Hugo (using a modified theme).</p>`,
     url: "https://conucowormfarm.com/",
     imgUrl: "https://i.imgur.com/rYIVqdu.png",
     github: "https://github.com/wingraptor/conucoWormFarmStore",
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Spotify Playlist Creator",
     description: `This is website adds a Spotify playlist to your account which contains tracks from the best 50 albums of 2018 according to <a href='https://www.complex.com/music/best-albums-2018/'>Complex Magazine</a>.
-    This website project was built using Express.js and EJS
+    This website project was built using Express.js and EJS.
     </br>
     <strong class="highlighted"> Note that this project is no longer maintained</strong>`,
     url: "https://spotifyplaylistapp.herokuapp.com/",
